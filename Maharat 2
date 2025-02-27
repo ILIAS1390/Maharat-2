@@ -90,3 +90,19 @@ print(f"""
 - بیشترین فروش: {max_sale} تومان
 - کمترین فروش: {min_sale} تومان
 """)
+
+
+
+# ورودی
+income = float(input("درآمد ماهانه (تومان): "))
+expenses = float(input("هزینههای ماهانه (تومان): "))
+
+profit = income - expenses
+
+# خروجی
+if profit > 0:
+    print(f"✅ سود خالص: {profit:.2f} تومان")
+elif profit < 0:
+    print(f"❌ زیان خالص: {-profit:.2f} تومان")
+else:
+    print("⚖️ هیچ سود یا زیانی وجود ندارد.")
