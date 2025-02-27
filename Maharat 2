@@ -16,3 +16,77 @@ def show_customers():
 add_customer("آرش", "arash@email.com")
 add_customer("نازنین", "nazanin@email.com", ["کتاب", "لوازم تحریر"])
 show_customers()
+
+
+
+
+
+
+ratings = [4, 5, 3, 2, 5, 4, 5]
+
+average_rating = sum(ratings) / len(ratings)
+print(f"میانگین امتیاز محصول: {average_rating:.1f} از 5")
+
+if average_rating >= 4:
+    print("رضایت بالایی وجود دارد! 🌟")
+else:
+    print("نیاز به بهبود دارد.")
+
+
+
+
+
+
+
+
+
+def calculate_salary(hours, hourly_rate):
+    if hours > 40:
+        overtime = hours - 40
+        salary = (40 * hourly_rate) + (overtime * hourly_rate * 1.5)
+    else:
+        salary = hours * hourly_rate
+    return salary
+
+# مثال استفاده:
+pay = calculate_salary(45, 100_000)
+print(f"حقوق قابل پرداخت: {pay} تومان")
+
+
+
+
+def calculate_discount(quantity, unit_price):
+    if quantity >= 100:
+        discount = 0.25  # 25% تخفیف
+    elif quantity >= 50:
+        discount = 0.15  # 15% تخفیف
+    else:
+        discount = 0
+    
+    total = quantity * unit_price * (1 - discount)
+    return total
+
+# مثال استفاده:
+price = calculate_discount(60, 1000)
+print(f"مبلغ قابل پرداخت: {price:.2f} تومان")
+
+
+
+
+
+
+
+daily_sales = [120, 85, 150, 200, 90]
+
+total = sum(daily_sales)
+average = total / len(daily_sales)
+max_sale = max(daily_sales)
+min_sale = min(daily_sales)
+
+print(f"""
+گزارش فروش ماه:
+- مجموع فروش: {total} تومان
+- میانگین روزانه: {average:.2f} تومان
+- بیشترین فروش: {max_sale} تومان
+- کمترین فروش: {min_sale} تومان
+""")
